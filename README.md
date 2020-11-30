@@ -1,2 +1,2 @@
-# dfp-airbnb-zerorisk
-Data Focused Python - NYC Airbnb Analysis
+# Data Focused Python - NYC Airbnb Analysis
+### Group Member: Chengyu Wu, Yijing Lin, Lingqin Yang, Zhexin Hu.
