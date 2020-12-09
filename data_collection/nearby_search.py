@@ -24,7 +24,15 @@ listing_file = "./listings_clean_copy.csv"
 api_key = 'AIzaSyBCcZNt6ALOwNKpWB9P5r5e9Qykpj5yrQY'
 
 
-# Get nearby places
+"""
+Input: location string("latitude,longitude"), search radius, category of places, how many results.
+
+Description: Construct the request url using inputs. Get the JSON response. If the response's 
+status is "ZERO_RESULTS", meaning no subway/toursit attractions nearby, set the corresponding 
+item in list to 0, otherwise 1.
+
+Output: A list recording whether there is subway/tourist attractions nearby for each listing.
+"""
 def search_nearby(loc, api_key, radius, category, pagetoken):
     # nearby search url
     nearby_url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?"
@@ -48,23 +56,17 @@ def search_nearby(loc, api_key, radius, category, pagetoken):
     
     
     
-    
-    
 
 
 def main():
 
     # Read from listing file.
     data = pd.read_csv(listing_file, sep = ',')
-    print(data['lat'], data['lng'])
-    
     
     location = [(row[0],row[1]) for row in zip(data['lat'], data['lng'])]
-    print(len(location))
     
     for d in location:
         loc = str(d[0])+","+str(d[1])
-        print(loc)
         search_nearby(loc,  api_key, "1000", "tourist_attraction", "20" )
         search_nearby(loc,  api_key, "500", "subway_station", "20" )
    

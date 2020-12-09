@@ -4,10 +4,13 @@
 Created on Mon Dec 7 00:45:09 2020
 
 @author: yanglingqin
+
+Description: o	Read from the listings csv file of rating, subway and tourist attractions data.
+             o	Plot box plot of rating~subway and rating~tourist attraction.
+
 """
 
 import pandas as pd
-import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 
