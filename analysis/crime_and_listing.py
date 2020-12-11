@@ -1,11 +1,11 @@
 def crime_clean_and_merge():
     import pandas as pd
     #read crime data
-    crime = pd.read_csv('NYPD_Complaint_Data_Current__Year_To_Date_.csv')
+    crime = pd.read_csv('../data_collection/NYPD_Complaint_Data_Current__Year_To_Date_.csv')
     # read airbnb data
-    cleaned_listing = pd.read_csv('data_collection/listings_clean_copy.csv')
+    cleaned_listing = pd.read_csv('../data_collection/listings_clean_copy.csv')
     # read insideairbnb data to update borough
-    inside_airbnb = pd.read_csv('listings_insideairbnb.csv')
+    inside_airbnb = pd.read_csv('../data_collection/listings_insideairbnb.csv')
     inside_airbnb = inside_airbnb[['id', 'neighbourhood_group_cleansed']]
     airbnb = pd.merge(cleaned_listing, inside_airbnb,
                               how="left", on='id')

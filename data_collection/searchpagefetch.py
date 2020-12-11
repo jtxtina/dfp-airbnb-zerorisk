@@ -16,7 +16,7 @@ Prerequisites:
 2. Chrome WebDriver
    - Download corresponding version (OS&Chrome Version) of WebDriver via https://chromedriver.chromium.org/downloads
    - Put chromedriver.exe into the "script" folder at the same directory as your current using Python.exe
-   
+
 """
 
 import time
@@ -203,4 +203,3 @@ if __name__ == '__main__':
     # Unit Test of Opening Browser Window. Enable it if you need to test your package installation & connectivity.
     #browser = webdriver.Chrome()
     #browser.get('https://www.airbnb.com/s/New-York--NY--United-States/homes?adults=1&refinement_paths%5B%5D=%2Fhomes&search_type=autocomplete_click&tab_id=home_tab&query=New%20York%2C%20NY%2C%20United%20States&locale=en')
-
