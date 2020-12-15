@@ -20,4 +20,4 @@
 
 
 ## Overview of NYC rating distribution
-![Average Rating of Listings in NYC](/plot/hotmap/avg_rate_nyc.png)
+![Average Rating of Listings in NYC](/plot/heattmap/avg_rate_nyc.png)
